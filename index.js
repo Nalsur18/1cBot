@@ -4,7 +4,8 @@ const token = '6453567375:AAFa0mtRy0FzTt7zbrNGkfqvTXNI2J62Yx0'
 const bot = new TelegramApi(token, {polling: true})
 
 const XLSX = require('xlsx')
-const workbook = XLSX.readFile("C:/Users/Ишмухаметов/Desktop/bot.xlsx");
+//const workbook = XLSX.readFile("C:/Users/Ишмухаметов/Desktop/bot.xlsx");
+const workbook = XLSX.readFile("//bdserver83/ПРОГИ2023/Ds/bot.xlsx");
 
 function send(text,chatFN, chatLN){
     
@@ -23,7 +24,7 @@ function send(text,chatFN, chatLN){
     
     // Update the XLSX file
     XLSX.utils.sheet_add_json(workbook.Sheets["Sheet1"], worksheets.Sheet1)
-    XLSX.writeFile(workbook, "C:/Users/Ишмухаметов/Desktop/bot.xlsx");
+    XLSX.writeFile(workbook, "//bdserver83/ПРОГИ2023/Ds/bot.xlsx");
 }
 
 bot.on('message', msg =>{
